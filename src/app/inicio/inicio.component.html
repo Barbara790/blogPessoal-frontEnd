@@ -1,1 +1,84 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+<div class="row bg-secondary align-items-center">
+<div class="col-md-6">
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 text-white ">
+            <h1 class="fs-54">Olá, vem com a gente</h1>
+            <h5 class="fs-18">Compartilhe conosco o que te faz ser pessoa especial</h5>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-4">
+        <div class="col-md-6">
+            <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Nova Postagem</button>
+            <a class="btn btn-outline-light ms-2" href="#postagens"> Ver Postagens</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 d-flex">
+    <img src="https://i.imgur.com/fwpCH78.png" width="500px" height="500px" alt="Desenho Black Lives Matter">
+    
+
+</div>
+
+
+</div>
+
+</div>
+
+<div class="container mt-4 mb-4" id="postagens">
+    <nav>
+        <div class="nav nav-tabs d-flex  justify-content-center" id="nav-tab" role="tablist"> 
+          <button class="nav-link active text-dark" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+      </div>
+</div>
+
+  
+ 
+  
+ 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="titulo">Título</label>
+              <input type="text" class="form-control" id="titulo" placeholder="título">
+          </div>
+
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="texto">Escolha um tema ou <a href="">cadastre um novo</a> :</label>
+            <select class="form-control" name="tema" id="tema">
+                <option value="">Temas</option>
+            </select>
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
