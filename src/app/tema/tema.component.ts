@@ -23,6 +23,7 @@ export class TemaComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
+    this.temaService.refreshToken()
     this.findAllTemas()
   }
 
@@ -33,7 +34,7 @@ export class TemaComponent implements OnInit {
   }
 
   cadastrar(){
-    this.temaService.postTema(this.tema).subscribe((resposta:Tema) => {
+    this.temaService.postTema(this.tema).subscribe((resposta:Tema)=>{
       this.tema = resposta
       alert('Tema cadastrado com sucesso!')
       this.findAllTemas()
