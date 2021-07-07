@@ -14,6 +14,8 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
+  
+
   entrar(userLogin : UserLogin) : Observable<UserLogin>{
     return this.http.post<UserLogin>('http://localhost:8080/usuarios/login', userLogin)
     
@@ -23,6 +25,9 @@ export class AuthService {
     return this.http.post<User>('http://localhost:8080/usuarios/cadastro', user)
   }
 
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+  }
   logado(){
     let ok: boolean = false 
 
