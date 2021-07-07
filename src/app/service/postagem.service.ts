@@ -24,8 +24,20 @@ uri:string = 'http://localhost:8080'
     return this.http.get<Postagem[]>(`${this.uri}/postagens`,this.token)
   }
 
+  getByIdPostagem(id:number):Observable<Postagem>{
+    return this.http.get<Postagem>(`${this.uri}/postagens/${id}`,this.token)
+  }
   postPostagem(postagem: Postagem) : Observable<Postagem>{
     return this.http.post<Postagem>(`${this.uri}/postagens`, postagem, this.token)
   }
+
+
+putPostagem(postagem: Postagem): Observable<Postagem>{
+  return this.http.put<Postagem>(`${this.uri}/postagens`, postagem, this.token)
 }
 
+deletePostagem(id: number){
+  return this.http.delete(`${this.uri}/postagens/${id}`,this.token)
+}
+
+}

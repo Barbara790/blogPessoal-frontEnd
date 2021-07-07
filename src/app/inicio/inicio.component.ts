@@ -43,7 +43,7 @@ export class InicioComponent implements OnInit {
     this.getAllPostagens()
   }
 
-  finByIdtema(){
+  findByIdTema(){
     this.temaService.getByIdTema(this.idTema).subscribe((resposta: Tema)=>{
       this.tema = resposta
     })
